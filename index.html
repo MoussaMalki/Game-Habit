@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Habit Tracker</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- link to icons -->
+
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="coin-container">
+        <span class="coin-count">00</span>
+        <img src="images/Coin.png" alt="a coin" />
+      </div>
+      <div class="date-container">
+        <h3>Today</h3>
+        <span class="today-date">00</span>
+      </div>
+      <div class="hearts-container">
+        <img src="images/heart.png" alt="heart" />
+        <img src="images/heart.png" alt="heart" />
+        <img src="images/heart.png" alt="heart" />
+      </div>
+    </header>
+    <section id="home">
+      <div class="nav-bar">
+        <a id="Tasks">Tasks</a>
+        <a id="Store">Store</a>
+        <a id="Track">Track</a>
+      </div>
+      <div id="Tasks-Div">
+        <div class="add-task">
+          <input
+            type="text"
+            class="add-task-input"
+            placeholder="Add Task"
+            maxlength="29"
+          />
+          <br />
+          <div>
+            <input
+              type="text"
+              oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+              maxlength="2"
+              class="add-coins-input"
+              placeholder="10"
+            />
+            <i class="bx bx-plus-circle" id="add-btn"></i>
+          </div>
+        </div>
+        <div class="added-tasks"></div>
+      </div>
+
+      <!-- another div for the store section -->
+
+      <div id="Store-Div">
+        <div class="add-item">
+          <input
+            type="text"
+            class="add-item-input"
+            placeholder="Add Item"
+            maxlength="29"
+          />
+          <br />
+          <div>
+            <input
+              type="text"
+              oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+              maxlength="2"
+              class="add-coins2-input"
+              placeholder="10"
+            />
+            <i class="bx bx-plus-circle" id="add-btn2"></i>
+          </div>
+        </div>
+        <div class="added-tasks2"></div>
+      </div>
+
+      <div id="Track-Div">
+        <div class="calander">
+          <div class="calander-date">
+            <span class="calander-day">Mon</span>
+            <span class="calander-year">2022</span>
+          </div>
+          <div class="calander-days">
+            <h3 class="day" day="Monday">1</h3>
+            <h3 class="day" day="Tuesday">2</h3>
+            <h3 class="day" day="Wednesday">3</h3>
+            <h3 class="day" day="Thursday">4</h3>
+            <h3 class="day" day="Friday">5</h3>
+            <h3 class="day" day="Saturday">6</h3>
+            <h3 class="day" day="Sunday">7</h3>
+          </div>
+          <div class="gift">
+            <i class="bx bx-gift bx-tada bx-flip-horizontal"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="gift-div">
+        <p>
+          when you complete all of ur daily tasks this week, on day 7 you will
+          receive 100 coins that you can use to buy expensive offers ,
+          <span>you deserve it king</span>
+        </p>
+        <i class="bx bx-x-circle" id="close"></i>
+      </div>
+    </section>
+    <script src="app.js"></script>
+  </body>
+</html>
